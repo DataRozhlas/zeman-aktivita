@@ -1,0 +1,83 @@
+<!-- 
+  TODO Template mapy ČR
+  TODO Template mapy Evropy
+  TODO Prep custom tooltipů, atd. (varianty tooltipů)
+  TODO Styling tooltipů 
+  TODO Pošetři NaN v tooltipech atd. 
+ -->
+
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- libs -->
+<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+
+<!-- links -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text">
+<link href="https://fonts.googleapis.com/css2?family=Asap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css" />
+<link rel="stylesheet" href="./highcharts-style.css" />
+
+<!-- html -->
+<div id="vis-column-chart-unit-kraje"></div>
+<div id="vis-column-chart-unit-zahranici"></div>
+
+<script>
+
+/*
+    Tady si nastavte barvy pro vsechny grafy, ktere potom prirazuj podle klice, napr. 
+    * color: colors.default nebo 
+    * color: colors['2020'] // zarucene funguje vzdy
+*/
+var colors = {
+  'default': '#aaa',
+  '2020': '#e63946',
+  '2018': '#009FB8',
+  '2019': '#3E80B6',
+  'avg' : '#e63946',
+  'avg' : '#333',
+  'uhrn-highlight': '#30638e'
+}
+
+Highcharts.setOptions({
+    lang: {
+      months: ['ledna', 'února', 'března', 'dubna', 'května', 'června', 'července', 'srpna', 'září', 'října', 'listopadu', 'prosince'],
+      shortMonths: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec'],
+      // shortMonths: ['led', 'úno', 'bře', 'dub', 'kvě', 'čen', 'čec', 'srp', 'zář', 'říj', 'lis', 'pro'],
+      decimalPoint: ',',
+      numericSymbols: [' tis.', ' mil.', 'mld.', 'T', 'P', 'E'],
+      rangeSelectorFrom: 'od',
+      rangeSelectorTo: 'do',
+      rangeSelectorZoom: 'vyberte období:',
+    },
+  });
+
+let chartWidth =
+document.getElementById("vis-bar-multiple-categories").offsetWidth > 600
+  ? 600
+  : document.getElementById("vis-bar-multiple-categories").offsetWidth;
+
+
+/*  Checklist (temp)
+    * zkontroluj, ze pred jednopismennymi predlozkami mas vlozene nezlomitelne mezery: &nbsp (funguje pouze pokud pises html -> useHTML: true )
+      v zakope -> v&nbspzakope
+*/
+
+</script>
+<script src="./column-chart-unit-kraje.js"></script>
+<script src="./column-chart-unit-zahranici.js"></script>
+
+
+<!-- 
+  TODO Vyřešit, že podnadpis a popisky y-osy se občas kryjí, obzvlášť pokud je v popisku ticku i legenda
+  TODO Vyřešit, že čím víc řádků nadpisu / podnadpisu -> tím nižší graf (nesmysl!)
+  TODO Pridej ridici promennou pro yAxis label + pis popisek osy stranou a pak ho tam tahej pres promennou
+      : If popis osy u tick labels -> no xAxis.title
+      Rozdelany v line-chart-multiple.js
+  TODO figure out chartwidth -> maybe put all charts into one div and set its width
+  TODO colors pro stacked bar chart
+  TODO add area chart
+ -->
