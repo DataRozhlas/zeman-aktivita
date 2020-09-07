@@ -22,8 +22,8 @@
 <link rel="stylesheet" href="./highcharts-style.css" />
 
 <!-- html -->
-<div id="vis-column-chart-unit-kraje"></div>
-<div id="vis-column-chart-unit-zahranici"></div>
+<div id="vis-column-chart-kraje"></div>
+<div id="vis-column-chart-zahranici"></div>
 
 <script>
 
@@ -55,29 +55,6 @@ Highcharts.setOptions({
     },
   });
 
-let chartWidth =
-document.getElementById("vis-bar-multiple-categories").offsetWidth > 600
-  ? 600
-  : document.getElementById("vis-bar-multiple-categories").offsetWidth;
-
-
-/*  Checklist (temp)
-    * zkontroluj, ze pred jednopismennymi predlozkami mas vlozene nezlomitelne mezery: &nbsp (funguje pouze pokud pises html -> useHTML: true )
-      v zakope -> v&nbspzakope
-*/
-
 </script>
-<script src="./column-chart-unit-kraje.js"></script>
-<script src="./column-chart-unit-zahranici.js"></script>
-
-
-<!-- 
-  TODO Vyřešit, že podnadpis a popisky y-osy se občas kryjí, obzvlášť pokud je v popisku ticku i legenda
-  TODO Vyřešit, že čím víc řádků nadpisu / podnadpisu -> tím nižší graf (nesmysl!)
-  TODO Pridej ridici promennou pro yAxis label + pis popisek osy stranou a pak ho tam tahej pres promennou
-      : If popis osy u tick labels -> no xAxis.title
-      Rozdelany v line-chart-multiple.js
-  TODO figure out chartwidth -> maybe put all charts into one div and set its width
-  TODO colors pro stacked bar chart
-  TODO add area chart
- -->
+<script type="text/javascript" src="./vis-column-chart-kraje.js"></script>
+<script type="text/javascript" src="./vis-column-chart-zahranici.js"></script>
