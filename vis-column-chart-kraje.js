@@ -28,7 +28,7 @@ Highcharts.chart('vis-column-chart-kraje', {
     useHTML: true
   },
   subtitle: {
-    text: "V prvních polovině druhého volebního období vykonal Zeman v krajích o dvě třetiny méně návštěv, než v první půlce prvního období",
+    text: "V <span class='nineteen'>prvním volebním období</span> vyjel Miloš Zeman do krajů sedmapadesátkrát, ve <span class='twenty'>druhém období</span> zatím pětkrát.",
     useHTML: true
   },
   xAxis: {
@@ -80,7 +80,7 @@ Highcharts.chart('vis-column-chart-kraje', {
       { y: 10, color: colors['2019'] },
       { y: 14, color: colors['2019'] },
       { y: 13, color: colors['2019'] },
-      { y: 9, color: colors['2019'] },
+      { y: 14, color: colors['2019'] },
       { y: 3, color: colors['2020'] },
       { y: 2, color: colors['2020'] },
       { y: 0, color: colors['2020'] },

@@ -28,7 +28,7 @@ Highcharts.chart('vis-column-chart-zahranici', {
     useHTML: true
   },
   subtitle: {
-    text: "Ve druhém volebním období je počet Zemanových návštěv oproti roku 2014 třetinový",
+    text: "V <span class='nineteen'>prvním volebním období</span> vykonal Miloš Zeman 68 cest do zahraničí, ve <span class='twenty'>druhém období</span> zatím 17.",
     useHTML: true
   },
   xAxis: {
