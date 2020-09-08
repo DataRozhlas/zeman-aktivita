@@ -4,7 +4,7 @@ text {
   font-family: "Asap" !important;
 }
 
-p {
+#vis-column-chart-kraje p, #vis-column-chart-zahranici p {
   font-family: "Noticia text" !important;
 }
 
